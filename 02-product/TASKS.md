@@ -127,3 +127,12 @@ Outputs: 05-memory/RUNS.md, 05-memory/EVALS.md
 Skills: none
 Writeback: 05-memory/EVOLUTION.md
 
+
+### [DONE] 添加项目使用说明
+
+Owner: planner
+Next: none
+Inputs: 01-core/README.md, 02-product/*, 07-workflows/*, 08-agents/*
+Outputs: README.md, 01-core/README.md
+Skills: none
+Writeback: 02-product/TASKS.md

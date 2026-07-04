@@ -1,43 +1,35 @@
-﻿# APOS
+﻿# APOS Core
 
-## 如何使用
+这里是 APOS 的核心入口。
 
-APOS 是你的 AI 产品开发系统。
+## 文件说明
 
-最短使用路径：
+- `README.md`：核心层使用入口
+- `MANIFESTO.md`：APOS 的理念和判断优先级
+- `AGENTS.md`：所有 agent 必须遵守的总规则
 
-1. 在 `02-product/REQUIREMENTS.md` 写清当前需求
-2. 在 `02-product/TASKS.md` 建立任务状态
-3. 选择 `07-workflows/` 中对应流程
-4. 按流程调度 `08-agents/` 中的角色
-5. 完成后回写 `05-memory/`
+## 使用顺序
 
-## 默认入口
+1. 先读 `MANIFESTO.md`，理解 APOS 为什么存在
+2. 再读 `AGENTS.md`，理解所有 agent 的工作规则
+3. 回到根目录 `README.md`，按使用说明开始跑任务
 
-- 总规则：`01-core/AGENTS.md`
-- 产品定义：`02-product/PRODUCT.md`
-- 当前需求：`02-product/REQUIREMENTS.md`
-- 当前任务：`02-product/TASKS.md`
-- 新功能流程：`07-workflows/new-feature.md`
-- Agent 角色：`08-agents/README.md`
-- 记忆库：`05-memory/`
+## 核心判断
 
-## 一次任务的最小闭环
+APOS 的工作方式是：
 
 ```text
-REQUIREMENTS
-  -> TASKS
+产品目标
   -> workflow
   -> agents
   -> review / test
+  -> runs / evals
   -> memory
-  -> TASKS / REQUIREMENTS update
+  -> product update
 ```
 
-## 使用原则
+如果不确定下一步做什么，回到：
 
-- 不清楚目标时，先补需求，不急着实现
-- 任务必须有 owner 和 next owner
-- 重要判断必须落文件
-- review / test 失败必须回写经验
-- skills 可以使用，但不能覆盖项目文档
+- `02-product/REQUIREMENTS.md`
+- `02-product/TASKS.md`
+- `07-workflows/new-feature.md`
