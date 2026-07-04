@@ -136,3 +136,12 @@ Inputs: 01-core/README.md, 02-product/*, 07-workflows/*, 08-agents/*
 Outputs: README.md, 01-core/README.md
 Skills: none
 Writeback: 02-product/TASKS.md
+
+### [DONE] 添加小白使用指南
+
+Owner: planner
+Next: none
+Inputs: README.md, 01-core/README.md
+Outputs: QUICKSTART.md, README.md
+Skills: none
+Writeback: 02-product/TASKS.md

@@ -2,6 +2,8 @@
 
 APOS 是一个面向 AI 产品开发的本地协作系统。
 
+第一次使用请先看：[APOS 小白使用指南](QUICKSTART.md)
+
 它不是 GitHub 模板，而是一套让 AI 和人一起长期开发产品的操作系统：用产品文档定义目标，用 workflow 调度任务，用 agents 分工执行，用 memory 记录决策、经验和评估结果。
 
 ## 你应该从哪里开始
@@ -152,3 +154,5 @@ APOS 已具备最小可运行闭环：
 - 补 `07-workflows/review.md`
 - 补 `07-workflows/hotfix.md`
 - 补 `04-development/AGENT_INTERFACE.md`
+
+
