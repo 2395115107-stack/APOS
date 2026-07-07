@@ -1,0 +1,50 @@
+# 仓库贡献指南
+
+## 项目结构与模块组织
+
+APOS 是一个以文档为核心的 AI 产品开发操作系统。仓库按数字层级组织，方便人和 AI 按固定顺序阅读：
+
+- `01-core/`：理念、全局 AI 规则、核心运行原则。
+- `02-product/`：产品定义、路线图、需求和当前任务。
+- `03-design/`：设计系统和视觉方向。
+- `04-development/`：技术栈和工程约束。
+- `05-memory/`：决策、经验、模式、运行记录、评估和演化记录。
+- `06-references/`：外部研究、案例和参考资料。
+- `07-workflows/`：可复用工作流，例如新功能、评估和记忆复盘。
+- `08-agents/`：planner、architect、designer、frontend、backend、reviewer、tester 等角色定义。
+
+当前仓库还没有应用源码目录，主要用于管理产品、流程和智能体协作文档。
+
+## 构建、测试与开发命令
+
+当前项目没有构建流水线，也没有包管理器命令。主要使用 Git 和 Markdown 审阅完成协作：
+
+- `git status`：查看本地变更。
+- `git diff`：提交前检查文档修改。
+- `git log --oneline -5`：查看最近提交记录。
+
+如果后续加入代码或工具链，请先更新 `04-development/TECH_STACK.md`，再同步更新本文件。
+
+## 写作风格与命名规范
+
+Markdown 内容应清晰、直接、可执行。优先使用短章节、行动型要点，以及稳定字段：`Owner`、`Next`、`Inputs`、`Outputs`、`Skills`、`Writeback`。
+
+产品和记忆类核心文件使用大写命名，例如 `PRODUCT.md`、`TASKS.md`、`EVALS.md`。工作流文件使用小写短横线命名，例如 `new-feature.md`、`memory-review.md`。
+
+## 测试与验证指南
+
+当前测试以文档一致性验证为主。关闭任务前需要确认：
+
+- 需求、任务、工作流、agent 和 memory 记录保持一致。
+- 修改工作流时，同步检查 `02-product/`、`05-memory/`、`07-workflows/` 中的相关文档。
+- 完成的工作记录到 `05-memory/RUNS.md`，并在 `05-memory/EVALS.md` 中评估。
+
+## 提交与 Pull Request 规范
+
+最近提交使用简洁的祈使句摘要，例如 `Add beginner quickstart` 和 `Initialize APOS system`。继续保持短句、结果导向的提交信息。
+
+Pull Request 应说明改动目的、影响的 APOS 层级、已更新文档和后续任务。只有涉及视觉资产或渲染文档时，才需要补充截图。
+
+## Agent 专用说明
+
+根目录 `AGENTS.md` 是贡献者指南。AI agent 的运行规则位于 `01-core/AGENTS.md`。不确定下一步时，按 APOS 固定流程推进：先读核心规则，澄清产品目标，选择 workflow，调用 agents 执行，最后写回 memory。
