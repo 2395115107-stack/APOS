@@ -25,10 +25,11 @@
 ## 当前参考
 
 - `engineering/openai-harness-engineering.md`：OpenAI harness engineering，作为 APOS 的工程参考原则
+- `engineering/loop-engineering-guide.md`：Loop engineering，作为 APOS 外层闭环调度参考
+- `engineering/frontier-agent-systems-gap-analysis.md`：前沿 agent systems 缺口分析
 
 ## 当前状态
 
 Status: IN_PROGRESS
 Owner: planner
 Next: designer / architect
-

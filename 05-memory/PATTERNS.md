@@ -144,3 +144,38 @@ tester 只输出 PASS / FAIL、问题列表和报告路径，不直接修改代�
 ### 价值
 
 避免把过程记录和质量判断混在一起，让 APOS 能长期观察 agent、workflow 和 memory 的真实表现。
+
+---
+
+## PAT-008：Loop Specification
+
+### 适用场景
+
+需要多轮推进、验证反馈会改变下一步、并且结果需要写回 memory 的任务。
+
+### 模式
+
+```text
+Trigger
+  -> Goal
+  -> Workflow / Agents
+  -> Verification
+  -> Terminal State
+  -> Memory
+```
+
+### 使用方法
+
+每次进入 loop 前先写清：
+
+- 触发来源
+- 本轮目标
+- 内部 workflow
+- 验证方式
+- 终态
+- 最大轮次 / 时间 / 成本
+- 写回文件
+
+### 价值
+
+让 APOS 从“按流程做事”升级为“能判断何时开始、何时继续、何时停止、如何自我改进”的闭环系统。

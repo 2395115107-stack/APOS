@@ -15,6 +15,9 @@ workflow 决定：
 ## 当前可用流程
 
 - `new-feature.md`：新增功能流程
+- `loop.md`：外层闭环调度流程
+- `evaluation.md`：任务运行质量评估流程
+- `memory-review.md`：记忆复盘和文档园艺流程
 
 ## 待补流程
 
@@ -38,7 +41,9 @@ Writeback
 ## 使用规则
 
 1. 任务先进入 `02-product/TASKS.md`
-2. 再选择 workflow
-3. workflow 决定参与 agents
-4. agents 执行后回到 workflow 收口
-5. 最终回写 `05-memory/` 和 `02-product/`
+2. 判断是否需要 `loop.md`
+3. 再选择内部 workflow
+4. workflow 决定参与 agents
+5. agents 执行后回到 workflow 收口
+6. loop / evaluation 判断终态
+7. 最终回写 `05-memory/` 和 `02-product/`

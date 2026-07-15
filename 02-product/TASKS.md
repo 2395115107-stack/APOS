@@ -145,3 +145,12 @@ Inputs: README.md, 01-core/README.md
 Outputs: QUICKSTART.md, README.md
 Skills: none
 Writeback: 02-product/TASKS.md
+
+### [DONE] 吸收 Loop Engineering 参考并补外层闭环
+
+Owner: planner
+Next: memory-review
+Inputs: https://muximxc.github.io/loop-engineering-guide/, https://arxiv.org/abs/2607.00038
+Outputs: 06-references/engineering/loop-engineering-guide.md, 07-workflows/loop.md
+Skills: web-access
+Writeback: README.md, 06-references/README.md, 07-workflows/README.md, 05-memory/DECISIONS.md, 05-memory/PATTERNS.md, 05-memory/EVOLUTION.md

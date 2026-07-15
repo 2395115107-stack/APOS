@@ -12,16 +12,18 @@ APOS 是一个面向 AI 产品开发的本地协作系统。
 
 1. 写需求：`02-product/REQUIREMENTS.md`
 2. 建任务：`02-product/TASKS.md`
-3. 选流程：`07-workflows/new-feature.md`
-4. 调角色：`08-agents/`
-5. 做验证：`07-workflows/evaluation.md`
-6. 写回忆：`05-memory/`
+3. 判断是否需要闭环：`07-workflows/loop.md`
+4. 选流程：`07-workflows/new-feature.md`
+5. 调角色：`08-agents/`
+6. 做验证：`07-workflows/evaluation.md`
+7. 写回忆：`05-memory/`
 
 一次任务的闭环是：
 
 ```text
 REQUIREMENTS
   -> TASKS
+  -> loop
   -> workflow
   -> agents
   -> review / test
@@ -61,9 +63,11 @@ Skills: none
 Writeback: 02-product/TASKS.md, 05-memory/*
 ```
 
-### 3. 使用 new-feature workflow
+### 3. 使用 loop / new-feature workflow
 
-打开：`07-workflows/new-feature.md`
+打开：`07-workflows/loop.md` 判断是否需要多轮闭环。
+
+如果只是一次性新功能，直接打开：`07-workflows/new-feature.md`
 
 按流程推进：
 
@@ -108,6 +112,19 @@ planner
 使用 APOS，按 evaluation workflow 评估最近一次任务，并更新 RUNS / EVALS。
 ```
 
+### 跑一个闭环任务
+
+```text
+使用 APOS，按 loop workflow 推进这个任务：
+{你的任务}
+
+要求：
+- 判断是否值得 loop
+- 明确成功标准和终态
+- 执行后验证
+- 更新 RUNS / EVALS / memory
+```
+
 ### 做自进化整理
 
 ```text
@@ -143,6 +160,7 @@ APOS 已具备最小可运行闭环：
 
 - 产品入口已建立
 - 新功能 workflow 已建立
+- loop workflow 已建立
 - agents 已补齐
 - memory 已补齐
 - evaluation 已补齐
@@ -154,5 +172,3 @@ APOS 已具备最小可运行闭环：
 - 补 `07-workflows/review.md`
 - 补 `07-workflows/hotfix.md`
 - 补 `04-development/AGENT_INTERFACE.md`
-
-

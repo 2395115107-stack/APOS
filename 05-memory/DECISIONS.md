@@ -146,3 +146,29 @@ APOS 采用 harness engineering 作为工程参考原则。
 - 新增 `06-references/engineering/openai-harness-engineering.md`
 - 新增 `07-workflows/memory-review.md`
 - 后续应避免把 `AGENTS.md` 写成百科全书，而应保持为地图和索引
+
+---
+
+## DEC-006：采用 Loop Engineering 作为外层调度原则
+
+Date: 2026-07-15
+Owner: planner
+Status: accepted
+
+### 背景
+
+APOS 已经具备 workflow、agents、memory 和 evaluation，但如果每次仍靠人手动决定下一步，系统还没有真正形成可重复闭环。
+
+### 决定
+
+新增 `07-workflows/loop.md`，作为 APOS 的外层闭环调度原则。
+
+### 原因
+
+- loop 能明确触发、目标、验证、停止和记忆
+- 可以避免 agent 无限制循环或虚假完成
+- 可以让 evaluation 和 memory 真正参与下一轮行动
+
+### 影响
+
+复杂任务应先判断是否值得 loop；如果需要多轮推进，必须写清终态和验证方式。

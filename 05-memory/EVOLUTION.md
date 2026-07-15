@@ -122,3 +122,45 @@ run log
   -> improvement task
   -> memory update
 ```
+
+---
+
+## 2026-07-15：吸收 Loop Engineering 并补外层闭环
+
+### 变化
+
+新增：
+
+- `06-references/engineering/loop-engineering-guide.md`
+- `07-workflows/loop.md`
+
+更新：
+
+- `README.md`
+- `06-references/README.md`
+- `07-workflows/README.md`
+- `05-memory/DECISIONS.md`
+- `05-memory/PATTERNS.md`
+
+### 原因
+
+APOS 需要从“有流程”升级为“有闭环”：不仅能执行任务，还要知道何时触发、如何验证、何时停止、如何写回记忆。
+
+### 影响
+
+APOS 增加了外层 loop 规格：
+
+```text
+Trigger
+  -> Goal
+  -> Workflow / Agents
+  -> Verification
+  -> Terminal State
+  -> Memory
+```
+
+### 下一步
+
+- 在实际任务中使用 `loop.md`
+- 将 terminal state 写入后续 `RUNS.md` / `EVALS.md`
+- 继续补 `initialize.md`、`review.md`、`hotfix.md`
