@@ -72,7 +72,7 @@ review / test / 评估报告默认写入：
 10-reports/{RUN-ID}/
 ```
 
-例如 `10-reports/RUN-20260704-001/review.md`。
+例如 `10-reports/{RUN-ID}/review.md`。
 
 - `RUN-ID` 来自 `05-memory/RUNS.md` 的本次运行编号
 - planner 在任务条目中可以指定其它报告路径；未指定时使用默认位置

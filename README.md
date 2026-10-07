@@ -177,17 +177,16 @@ planner
 APOS v1.1 已具备完整工作流覆盖：
 
 - 产品入口已建立
-- 九大 workflow 已补齐：initialize / new-feature / redesign / review / hotfix / release / loop / evaluation / memory-review
+- 十大 workflow 已补齐：initialize / new-feature / redesign / review / parallel-review / hotfix / release / loop / evaluation / memory-review
 - agents 已补齐
 - memory 已补齐
 - evaluation 已补齐
 - Agent 接口规范已建立：`04-development/AGENT_INTERFACE.md`
 - 权限模型已建立：`04-development/PERMISSIONS.md`
+- 机械检查已建立：`09-tools/check_docs.py`（必需文件、引用一致性、任务字段）
 - 已吸收 2026 年 context / harness / spec-driven 工程共识（见 `06-references/engineering/agentic-engineering-2026-update.md`）
 
 下一步建议：
 
-- 补 `09-tools/` 机械检查脚本（文档完整性、字段完整性、引用存在性）
 - 建立任务评估集与回归样例库
-- 补 `07-workflows/parallel-review.md`
 - 在真实项目中跑一轮完整 loop，回写 RUNS / EVALS

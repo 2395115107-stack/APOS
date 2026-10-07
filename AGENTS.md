@@ -33,7 +33,9 @@ Use uppercase filenames for major product records, for example `PRODUCT.md`, `TA
 
 ## Testing Guidelines
 
-Testing is currently documentation-based. Before closing a task, verify that:
+Testing is currently documentation-based. Run `python 09-tools/check_docs.py` before closing documentation tasks: it verifies required files exist, internal path references resolve, and task entries carry all required fields.
+
+Before closing a task, verify that:
 
 - Requirements, tasks, workflows, agents, and memory records stay consistent.
 - Any workflow change updates related files in `02-product/`, `05-memory/`, and `07-workflows/`.

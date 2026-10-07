@@ -18,6 +18,7 @@ workflow 决定：
 - `new-feature.md`：新增功能流程
 - `redesign.md`：页面或体验重构流程
 - `review.md`：代码和产物评审流程
+- `parallel-review.md`：大范围改动的并行评审编排
 - `hotfix.md`：紧急修复流程
 - `release.md`：发布前检查流程
 - `loop.md`：外层闭环调度流程
@@ -26,7 +27,16 @@ workflow 决定：
 
 ## 待补流程
 
-- `parallel-review.md`：并行评审编排（当前做法已写入 `review.md`，独立编排文件按需再拆）
+- `routing.md`：任务路由分发（缺口分析 P2）
+- `evaluator-optimizer.md`：独立编排文件（当前模式已并入 `review.md`，按需再拆）
+
+## 机械检查
+
+文档完整性、引用一致性和任务字段由 `09-tools/check_docs.py` 检查：
+
+```text
+python 09-tools/check_docs.py
+```
 
 ## 按场景选择
 
@@ -35,6 +45,7 @@ workflow 决定：
 日常新功能         -> new-feature.md
 页面 / 体验重构    -> redesign.md
 一轮实现完成       -> review.md
+大改动多维验收     -> parallel-review.md
 线上故障           -> hotfix.md
 准备发布           -> release.md
 多轮闭环任务       -> loop.md
