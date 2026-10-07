@@ -171,6 +171,7 @@ planner
 - skills 是能力，不是最高规则
 - review / test 失败必须回写 memory
 - 完成任务后必须更新 `RUNS.md` 和 `EVALS.md`
+- 文档批量修改后运行 `python 09-tools/check_docs.py`，发布前必须 PASS
 
 ## 当前状态
 

@@ -114,3 +114,33 @@ APOS v1.1 完成：九大 workflow 齐备，agent 接口与权限模型建立，
 
 - 补 `09-tools/` 机械检查脚本
 - 在真实项目中跑一轮完整 loop
+
+---
+
+## RUN-20261007-002: v1.1 迭代三轮自检
+
+Date: 2026-10-07
+Status: PASS
+Workflow: memory-review / review-like
+Owner: planner
+Agents: planner, reviewer（一致性巡检与收口）, tester（机械检查）
+Skills: none
+Inputs: 全仓库文档, 09-tools/check_docs.py
+Outputs: 09-tools/check_docs.py, 09-tools/README.md, 07-workflows/parallel-review.md, 10-reports/README.md, 一致性修正（01-core/AGENTS.md, AGENTS.md, QUICKSTART.md, AGENT_INTERFACE.md, 07-workflows/README.md）
+Review: SELF-CHECK（三轮：一致性巡检 → 机械检查 → 评审收口）
+Test: check_docs.py PASS（42 文件 / 引用可解析 / 任务字段齐全）
+Fix Rounds: 2
+Writeback: 02-product/ROADMAP.md, 02-product/TASKS.md, 05-memory/LESSONS.md, 05-memory/EVALS.md, README.md, AGENTS.md
+
+### 结果
+
+三轮迭代完成：第一轮修交叉引用并统一入口指针；第二轮落地机械检查并补齐最后一个待补 workflow（parallel-review），检查从 FAIL（20 处）修到 PASS；第三轮评审收口并回写 memory。
+
+### 失败或风险
+
+- KNOWN_PENDING 中的计划路径（routing / evaluator-optimizer / references 两个计划目录）需要定期复核，防止 allowlist 变成永久豁免
+
+### 下一步
+
+- 建立任务评估集与回归样例库
+- 在真实项目中跑一轮完整 loop

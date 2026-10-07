@@ -145,6 +145,15 @@ Outputs: 06-references/engineering/agentic-engineering-2026-update.md
 Skills: web-access
 Writeback: 06-references/README.md, 05-memory/DECISIONS.md, 05-memory/EVOLUTION.md
 
+### [DONE] v1.1 迭代三轮自检
+
+Owner: planner
+Next: none
+Inputs: 全仓库文档, 06-references/engineering/agentic-engineering-2026-update.md
+Outputs: 09-tools/check_docs.py, 07-workflows/parallel-review.md, 10-reports/README.md, 一致性修正
+Skills: none
+Writeback: 05-memory/RUNS.md, 05-memory/EVALS.md, 05-memory/LESSONS.md, 02-product/ROADMAP.md
+
 ### [DONE] 补运行日志和评估入口
 
 Owner: reviewer

@@ -143,3 +143,26 @@ Verification Fit: PARTIAL
 - Verification Fit 仍为 PARTIAL：机械检查脚本缺失，本次一致性核对为人工完成
 - 九个 workflow 中只有 new-feature / loop / evaluation / memory-review 被实际使用过，initialize / review / hotfix / release / redesign 待实战验证
 - 下一步建立评估集与回归样例库，避免评估只靠单次核对
+
+---
+
+## EVAL-20261007-002: v1.1 迭代三轮自检
+
+Run: RUN-20261007-002
+Status: PASS
+Failure Class: none
+Product Fit: PASS
+Workflow Fit: PASS
+Agent Fit: PASS
+Memory Fit: PASS
+Verification Fit: PASS
+
+### 结论
+
+Verification Fit 首次达到 PASS：机械检查落地后，文档一致性、引用可解析性、任务字段完整性都有了可重复的验证方式。本轮从检查到修复（20 处 → PASS）本身就是 check_docs.py 的第一次实战验证，并顺手闭环了最后一个待补 workflow。
+
+### 改进项
+
+- initialize / review / hotfix / release / redesign 仍待真实项目实战
+- KNOWN_PENDING allowlist 需要在每次 memory-review 时复核
+- 评估集与回归样例库仍未建立
