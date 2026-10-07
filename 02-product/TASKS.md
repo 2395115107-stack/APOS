@@ -63,29 +63,29 @@ Writeback: 05-memory/DECISIONS.md, 05-memory/LESSONS.md
 
 ## 下一批建议任务
 
-### [TODO] 补全 initialize workflow
+### [DONE] 补全 initialize workflow
 
 Owner: planner
-Next: architect / designer / frontend / backend
-Inputs: 01-core/AGENTS.md, 07-workflows/new-feature.md
+Next: memory-review
+Inputs: 01-core/AGENTS.md, 07-workflows/new-feature.md, 06-references/engineering/agentic-engineering-2026-update.md
 Outputs: 07-workflows/initialize.md
 Skills: none
 Writeback: 05-memory/PATTERNS.md
 
-### [TODO] 补全 review workflow
+### [DONE] 补全 review workflow
 
 Owner: reviewer
-Next: tester / frontend / backend
-Inputs: 08-agents/reviewer.md, 08-agents/tester.md
+Next: memory-review
+Inputs: 08-agents/reviewer.md, 08-agents/tester.md, 07-workflows/loop.md
 Outputs: 07-workflows/review.md
 Skills: none
 Writeback: 05-memory/PATTERNS.md
 
-### [TODO] 补全 hotfix workflow
+### [DONE] 补全 hotfix workflow
 
 Owner: planner
-Next: frontend / backend / reviewer / tester
-Inputs: 07-workflows/new-feature.md, 08-agents/*
+Next: memory-review
+Inputs: 07-workflows/new-feature.md, 08-agents/*, 04-development/PERMISSIONS.md
 Outputs: 07-workflows/hotfix.md
 Skills: none
 Writeback: 05-memory/PATTERNS.md
@@ -109,14 +109,41 @@ Outputs: 06-references/engineering/frontier-agent-systems-gap-analysis.md
 Skills: web-access
 Writeback: 05-memory/DECISIONS.md, 05-memory/PATTERNS.md, 05-memory/EVOLUTION.md
 
-### [TODO] 补 Agent-Computer Interface 规范
+### [DONE] 补 Agent Interface 规范
 
 Owner: architect
-Next: frontend / backend / reviewer
-Inputs: 06-references/engineering/frontier-agent-systems-gap-analysis.md
+Next: memory-review
+Inputs: 06-references/engineering/frontier-agent-systems-gap-analysis.md, 06-references/engineering/agentic-engineering-2026-update.md
 Outputs: 04-development/AGENT_INTERFACE.md
+Skills: web-access
+Writeback: 05-memory/DECISIONS.md, 05-memory/PATTERNS.md
+
+### [DONE] 补权限模型
+
+Owner: architect
+Next: memory-review
+Inputs: 06-references/engineering/frontier-agent-systems-gap-analysis.md
+Outputs: 04-development/PERMISSIONS.md
 Skills: none
 Writeback: 05-memory/PATTERNS.md
+
+### [DONE] 补 redesign / release workflow
+
+Owner: planner
+Next: memory-review
+Inputs: APOS-SCHEDULING.md, 07-workflows/new-feature.md
+Outputs: 07-workflows/redesign.md, 07-workflows/release.md
+Skills: none
+Writeback: 05-memory/PATTERNS.md, 02-product/ROADMAP.md
+
+### [DONE] 收录 2026 年 agent 工程文献
+
+Owner: planner
+Next: memory-review
+Inputs: Anthropic context engineering / writing tools for agents, arXiv:2603.05344, arXiv:2602.00180, GitHub Spec Kit, Microsoft spec-first
+Outputs: 06-references/engineering/agentic-engineering-2026-update.md
+Skills: web-access
+Writeback: 06-references/README.md, 05-memory/DECISIONS.md, 05-memory/EVOLUTION.md
 
 ### [DONE] 补运行日志和评估入口
 

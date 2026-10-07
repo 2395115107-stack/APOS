@@ -164,3 +164,53 @@ Trigger
 - 在实际任务中使用 `loop.md`
 - 将 terminal state 写入后续 `RUNS.md` / `EVALS.md`
 - 继续补 `initialize.md`、`review.md`、`hotfix.md`
+
+---
+
+## 2026-10-07：v1.1 收口——补齐全部常用 workflow 与 agent 接口
+
+### 变化
+
+新增：
+
+- `04-development/AGENT_INTERFACE.md`
+- `04-development/PERMISSIONS.md`
+- `07-workflows/initialize.md`
+- `07-workflows/review.md`
+- `07-workflows/hotfix.md`
+- `07-workflows/release.md`
+- `07-workflows/redesign.md`
+- `06-references/engineering/agentic-engineering-2026-update.md`
+
+更新：
+
+- `README.md`
+- `02-product/ROADMAP.md`（v1.1 → DONE）
+- `02-product/TASKS.md`
+- `06-references/README.md`
+- `07-workflows/README.md`
+- `07-workflows/loop.md`
+- `05-memory/DECISIONS.md`（DEC-007、DEC-008）
+- `05-memory/PATTERNS.md`（PAT-009、PAT-010）
+
+### 原因
+
+2026 年 7 月的缺口分析留下 7 个能力层缺口，其中 P0 / P1 的文档层缺口（agent interface、permissions、常用 workflow）尚未补齐。同时 2025Q4-2026 年的 context engineering / harness engineering / spec-driven development 文献为此提供了新的落地依据。
+
+### 影响
+
+APOS 从"最小可运行闭环"升级为"完整工作流覆盖"：
+
+```text
+initialize -> new-feature / redesign -> review -> release
+                                   -> hotfix（异常路径）
+loop / evaluation / memory-review 持续在外层监督
+```
+
+接口层（AGENT_INTERFACE）和权限层（PERMISSIONS）建立后，workflow 之间的交接有了统一格式，高风险操作有了统一约束。
+
+### 下一步
+
+- 补 `09-tools/` 机械检查脚本（缺口分析 Gap 6）
+- 建立任务评估集与回归样例库（Gap 3 深化）
+- 在真实项目中跑一轮完整 loop，验证新 workflow 的实际可用性

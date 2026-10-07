@@ -65,11 +65,14 @@ Owner: planner
 
 按任务类型选择：
 
+- 项目初始化：`initialize.md`
 - 新需求：`new-feature.md`
+- 页面 / 体验重构：`redesign.md`
 - 质量判断：`evaluation.md`
 - 系统整理：`memory-review.md`
-- 评审修复：未来使用 `review.md`
-- 紧急修复：未来使用 `hotfix.md`
+- 评审修复：`review.md`
+- 紧急修复：`hotfix.md`
+- 发布检查：`release.md`
 
 ## Step 4: 执行与验证
 

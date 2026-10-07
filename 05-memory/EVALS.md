@@ -120,3 +120,26 @@ APOS 已具备最小可运行闭环，但验证仍主要是文档和文件完整
 - 补 `04-development/AGENT_INTERFACE.md`
 - 补机械化文档检查
 - 补正式 `review.md` / `hotfix.md` / `initialize.md`
+
+---
+
+## EVAL-20261007-001: v1.1 收口——补齐常用 workflow 与 agent 接口
+
+Run: RUN-20261007-001
+Status: PASS
+Failure Class: none
+Product Fit: PASS
+Workflow Fit: PASS
+Agent Fit: PASS
+Memory Fit: PASS
+Verification Fit: PARTIAL
+
+### 结论
+
+缺口分析 P0 / P1 的文档层缺口全部补齐，v1.1 完成。新文献（context engineering、spec-driven、deterministic-first evaluation）均已映射到具体接口文件，而非只停留在综述。
+
+### 改进项
+
+- Verification Fit 仍为 PARTIAL：机械检查脚本缺失，本次一致性核对为人工完成
+- 九个 workflow 中只有 new-feature / loop / evaluation / memory-review 被实际使用过，initialize / review / hotfix / release / redesign 待实战验证
+- 下一步建立评估集与回归样例库，避免评估只靠单次核对

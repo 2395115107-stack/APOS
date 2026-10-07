@@ -172,3 +172,58 @@ APOS 已经具备 workflow、agents、memory 和 evaluation，但如果每次仍
 ### 影响
 
 复杂任务应先判断是否值得 loop；如果需要多轮推进，必须写清终态和验证方式。
+
+---
+
+## DEC-007：采用 Context Engineering 作为 agent 接口设计原则
+
+Date: 2026-10-07
+Owner: planner
+Status: accepted
+
+### 背景
+
+Anthropic《Effective context engineering for AI agents》确立：上下文的目标是最小的高信号 token 集，配套 compaction、结构化笔记、sub-agent 隔离。APOS 已有"轻量交接"原则，但停留在调度建议层面。
+
+### 决定
+
+新增 `04-development/AGENT_INTERFACE.md`，把 context engineering 原则落成统一接口：读取约定、路径规则、输出块、报告格式、上下文预算。所有 workflow 和 agent 的交接行为以它为准。
+
+### 原因
+
+- SWE-agent 早已证明接口质量直接影响 agent 表现
+- 轻量交接如不接口化，各角色会漂移回大段粘贴
+- 路径即契约让 review 和 evaluation 可以机械核对
+
+### 影响
+
+- 所有 workflow 的输出格式统一引用 `AGENT_INTERFACE.md`
+- 报告统一落 `10-reports/{RUN-ID}/`
+- 后续 `09-tools/` 检查脚本可基于此接口做字段校验
+
+---
+
+## DEC-008：验证阶梯确定性优先
+
+Date: 2026-10-07
+Owner: planner
+Status: accepted
+
+### 背景
+
+2026 年 evaluation 实践共识：确定性检查（构建、测试、lint、schema）能以极低成本拦住大多数问题；LLM judge 只用于确定性规则覆盖不到的维度。APOS 的 loop.md 已有 L1-L5 阶梯，但 review 流程未把它设为硬性前置。
+
+### 决定
+
+`review.md` 将 L1 / L2 确定性检查设为判断性评审的硬性前置；`release.md` 要求验证证据链；生产者不自审沿袭 loop.md 的 L4 约束。
+
+### 原因
+
+- 判断性评审成本高，应留给机器查不了的问题
+- 风格类问题交给机械检查是 2026 年 code review 分工共识
+- 证据链让发布检查可追溯
+
+### 影响
+
+- 一切评审先跑确定性检查，失败直接生成 findings
+- 发布必须有验证证据，缺失需书面声明降级

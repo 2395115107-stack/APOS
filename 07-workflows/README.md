@@ -14,18 +14,33 @@ workflow 决定：
 
 ## 当前可用流程
 
+- `initialize.md`：项目初始化流程
 - `new-feature.md`：新增功能流程
+- `redesign.md`：页面或体验重构流程
+- `review.md`：代码和产物评审流程
+- `hotfix.md`：紧急修复流程
+- `release.md`：发布前检查流程
 - `loop.md`：外层闭环调度流程
 - `evaluation.md`：任务运行质量评估流程
 - `memory-review.md`：记忆复盘和文档园艺流程
 
 ## 待补流程
 
-- `initialize.md`：初始化项目
-- `review.md`：代码和产物评审
-- `hotfix.md`：紧急修复
-- `redesign.md`：页面或体验重构
-- `release.md`：发布前检查
+- `parallel-review.md`：并行评审编排（当前做法已写入 `review.md`，独立编排文件按需再拆）
+
+## 按场景选择
+
+```text
+项目刚接入         -> initialize.md
+日常新功能         -> new-feature.md
+页面 / 体验重构    -> redesign.md
+一轮实现完成       -> review.md
+线上故障           -> hotfix.md
+准备发布           -> release.md
+多轮闭环任务       -> loop.md
+判断做得怎么样     -> evaluation.md
+整理经验与文档     -> memory-review.md
+```
 
 ## 通用输出字段
 

@@ -19,13 +19,21 @@
 
 目标：覆盖日常开发主要场景。
 
-计划补齐：
+状态：DONE（2026-10-07）
+
+已补齐：
 
 - `initialize.md`
+- `new-feature.md`（v1.0 已有）
 - `review.md`
 - `hotfix.md`
 - `redesign.md`
 - `release.md`
+
+同时补齐：
+
+- `04-development/AGENT_INTERFACE.md`
+- `04-development/PERMISSIONS.md`
 
 ## v1.2：参考库与模板库
 
@@ -43,9 +51,14 @@
 
 目标：让 APOS 能定期审查自己。
 
+状态：IN_PROGRESS
+
+已补齐：
+
+- memory review workflow（2026-07-15）
+
 计划补齐：
 
-- memory review workflow
-- 文档一致性检查清单
+- `09-tools/` 文档一致性检查脚本
 - agent 表现复盘模板
 - 决策过期检查机制

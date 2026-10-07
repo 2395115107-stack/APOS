@@ -24,6 +24,7 @@
 
 ## 当前参考
 
+- `engineering/agentic-engineering-2026-update.md`：2026 年 context / harness / spec-driven 工程共识综述（2026-10-07 收录）
 - `engineering/openai-harness-engineering.md`：OpenAI harness engineering，作为 APOS 的工程参考原则
 - `engineering/loop-engineering-guide.md`：Loop engineering，作为 APOS 外层闭环调度参考
 - `engineering/frontier-agent-systems-gap-analysis.md`：前沿 agent systems 缺口分析

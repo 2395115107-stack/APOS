@@ -83,3 +83,34 @@ APOS 已从目录方案进入最小可运行、自进化的文档系统。
 - 补 `05-memory/EVALS.md`
 - 补 `07-workflows/evaluation.md`
 - 后续补 `04-development/AGENT_INTERFACE.md`
+
+---
+
+## RUN-20261007-001: v1.1 收口——补齐常用 workflow 与 agent 接口
+
+Date: 2026-10-07
+Status: PASS
+Workflow: memory-review-like / documentation
+Owner: planner
+Agents: planner, reviewer（自检）, architect（接口规范）, tester（文件检查）
+Skills: web-access, web-search
+Inputs: frontier-agent-systems-gap-analysis.md, APOS-SCHEDULING.md, 2026 年 agent 工程文献（Anthropic / arXiv / GitHub Spec Kit）
+Outputs: 04-development/AGENT_INTERFACE.md, 04-development/PERMISSIONS.md, 07-workflows/initialize.md, 07-workflows/review.md, 07-workflows/hotfix.md, 07-workflows/release.md, 07-workflows/redesign.md, 06-references/engineering/agentic-engineering-2026-update.md
+Review: SELF-CHECK（引用一致性、字段完整性逐文件核对）
+Test: FILE-CHECK（新增文件存在、索引更新、无断裂引用）
+Fix Rounds: 1
+Writeback: README.md, 02-product/TASKS.md, 02-product/ROADMAP.md, 06-references/README.md, 07-workflows/README.md, 07-workflows/loop.md, 05-memory/*
+
+### 结果
+
+APOS v1.1 完成：九大 workflow 齐备，agent 接口与权限模型建立，2026 年文献落地为接口规范。仓库转为 public。
+
+### 失败或风险
+
+- 新 workflow 尚未在真实项目中运行过，可用性待实际任务验证
+- 机械检查仍缺失，文档一致性靠人工核对
+
+### 下一步
+
+- 补 `09-tools/` 机械检查脚本
+- 在真实项目中跑一轮完整 loop
