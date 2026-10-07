@@ -117,6 +117,8 @@ tester 的职责是输出：
 
 修复交给 `frontend` / `backend` / `designer` / `architect`。
 
+完整权限模型（各角色读写范围、高风险操作、人工检查点）见 `04-development/PERMISSIONS.md`。
+
 ### 8. 输出保持轻量
 
 agent 给主编排者的返回应尽量只包含：
@@ -232,6 +234,8 @@ Skills: {使用过的 skill；未使用则写 none}
 Writeback: {回写文件}
 Notes: {必要说明，保持简短}
 ```
+
+读取、写文件、报告路径和上下文预算的详细约定见 `04-development/AGENT_INTERFACE.md`。
 
 ---
 

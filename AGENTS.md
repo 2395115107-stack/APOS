@@ -10,7 +10,7 @@ APOS is a documentation-first operating system for AI product development. The r
 - `04-development/`: technical stack and engineering constraints.
 - `05-memory/`: decisions, lessons, patterns, runs, evaluations, and evolution notes.
 - `06-references/`: external research and benchmark notes.
-- `07-workflows/`: repeatable workflows such as feature work, evaluation, and memory review.
+- `07-workflows/`: repeatable workflows such as initialize, feature work, redesign, review, hotfix, release, loop, evaluation, and memory review.
 - `08-agents/`: role definitions for planner, architect, designer, frontend, backend, reviewer, and testers.
 
 There is no application source tree yet; this repository currently manages product, workflow, and agent documentation.

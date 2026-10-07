@@ -44,7 +44,7 @@ AI 接下来应该帮你做这些事：
 
 ---
 
-## 你最常用的 3 句话
+## 你最常用的 5 句话
 
 ### 1. 做新功能
 
@@ -63,6 +63,19 @@ AI 接下来应该帮你做这些事：
 
 ```text
 使用 APOS，按 memory-review workflow 整理 memory，清理过期经验，升级稳定 pattern。
+```
+
+### 4. 处理紧急问题
+
+```text
+使用 APOS，按 hotfix workflow 处理这个问题：
+{故障现象}
+```
+
+### 5. 准备发布
+
+```text
+使用 APOS，按 release workflow 检查并发布这个版本。
 ```
 
 ---
